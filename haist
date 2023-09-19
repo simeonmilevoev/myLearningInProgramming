@@ -1,0 +1,9 @@
+public static void main (String [] args) {
+
+    Scanner scanner = new Scanner.(System.in);
+
+    int zero = 0;
+
+    if (zero<=1) {
+System.out.printLn("true");
+
