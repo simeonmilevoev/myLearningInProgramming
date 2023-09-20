@@ -1,9 +1,33 @@
-public static void main (String [] args) {
+mport java.util.Scanner;
 
-    Scanner scanner = new Scanner.(System.in);
+public class Main {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 
-    int zero = 0;
+		String username = scanner.nextLine();
+		String password = "";
 
-    if (zero<=1) {
-System.out.printLn("true");
+		for (int position = username.length() - 1;  position >= 0; position --) {
+			char currentSymbol = username.charAt(position);
+			password += currentSymbol;
+		}
+
+
+		password = scanner.nextLine();
+
+		int wrongPass = 0;
+		while (!password.equals("username")) {
+			wrongPass++;
+			System.out.printf("Incorrect password. Try again.");
+			if (wrongPass == 4) {
+				System.out.printf("User %s is blocked", username);
+				return;
+			}
+			password = scanner.nextLine();
+		}
+		System.out.printf("User %s logged in.");
+	}
+}
+
+
 
